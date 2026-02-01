@@ -25,6 +25,5 @@ pnpm-debug.log*
 .vscode/
 .cursor/
 
-# edgeone deployment folder
-.edgeone/
-package-lock.json
+# build
+pnpm-lock.json
