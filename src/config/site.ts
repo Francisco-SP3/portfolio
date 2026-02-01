@@ -1,40 +1,37 @@
 // Site-wide configuration
 export const siteConfig = {
   // Site metadata
-  name: "Astro Blog",
-  title: "Astro Blog",
-  description: "A modern blog built with Astro",
+  name: "FSP Portfolio",
+  title: "FSP Portfolio",
+  description: "My personal portfolio built with Astro",
   
   // Navigation
   navigation: {
     home: "Home",
-    posts: "Posts",
+    projects: "Projects",
     contact: "Contact",
-    comments: "Comments",
   },
   
   // Hero Section
   hero: {
-    prefix: "I am",
-    name: "Someone Name",
-    intro: "I am a web developer and blogger, passionate about sharing knowledge and building cool things with code.\nWelcome to my portfolio blog!",
-    avatar: "/image/20943608.jpeg",
+    prefix: "Hello there! I'm",
+    name: "Francisco Salas Porras",
+    intro: "A passionate robotics engineer!",
+    avatar: "/image/fsp_photo.jpeg",
     buttons: {
-      viewPosts: "View Posts",
+      viewProjects: "View Projects",
       contactMe: "Contact Me",
     },
     socialLinks: [
-      { name: "Twitter", icon: "/svg/twitter.svg", url: "https://x.com/astrodotbuild" },
-      { name: "LinkedIn", icon: "/svg/linkedin.svg", url: "https://www.linkedin.com/company/astrodotbuild" },
-      { name: "Facebook", icon: "/svg/facebook.svg", url: "https://www.facebook.com/astrodotbuild" },
-      { name: "GitHub", icon: "/svg/github.svg", url: "https://github.com/tomcomtang/astro-cartoon-portfolio" },
+      { name: "LinkedIn", icon: "/svg/linkedin_dark.svg", url: "https://www.linkedin.com/company/astrodotbuild" },
+      { name: "GitHub", icon: "/svg/github_dark.svg", url: "https://github.com/tomcomtang/astro-cartoon-portfolio" },
     ],
   },
   
   // About Section
   about: {
     title: "About Me",
-    text: "Hi, I'm Someone, a passionate web developer and blogger. I love exploring new technologies and sharing knowledge with the community. On this blog, you'll find my thoughts on web development, tutorials, and project showcases. I hope my content can inspire others in their coding journey.",
+    text: "I'm originally from Monterrey, Mexico. I've dedicated myself working on and .",
   },
   
   // Contact Page
@@ -75,7 +72,7 @@ export const siteConfig = {
   
   // Footer
   footer: {
-    copyright: "© 2025 Someone. All rights reserved.",
+    copyright: "© 2026 Francisco-SP3. All rights reserved.",
     links: [
       { text: "Privacy Policy", url: "#" },
       { text: "Terms of Service", url: "#" },
@@ -87,11 +84,11 @@ export const siteConfig = {
     },
   },
   
-  // Posts Page
-  posts: {
-    title: "Blog Posts",
-    subtitle: "Explore our latest articles on web development, design, and technology",
-    searchPlaceholder: "Search posts...",
+  // Projects Page
+  projects: {
+    title: "Projects",
+    subtitle: "Explore my latest projects and contributions",
+    searchPlaceholder: "Search projects...",
   },
   
   // Comments Page

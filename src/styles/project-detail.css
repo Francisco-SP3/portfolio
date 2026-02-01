@@ -1,34 +1,34 @@
-/* Post Detail Page Styles */
+/* Project Detail Page Styles */
 :root {
-  /* Heading spacing variables for post detail page */
-  --post-h2-margin-top: 3rem;
-  --post-h2-margin-bottom: 1.17rem;
-  --post-h2-content-margin-top: 1.17rem;
+  /* Heading spacing variables for project detail page */
+  --project-h2-margin-top: 3rem;
+  --project-h2-margin-bottom: 1.17rem;
+  --project-h2-content-margin-top: 1.17rem;
   
-  --post-h3-margin-top: 2.5rem;
-  --post-h3-margin-bottom: 1rem;
-  --post-h3-content-margin-top: 1rem;
+  --project-h3-margin-top: 2.5rem;
+  --project-h3-margin-bottom: 1rem;
+  --project-h3-content-margin-top: 1rem;
   
-  --post-h4-margin-top: 2rem;
-  --post-h4-margin-bottom: 0.83rem;
-  --post-h4-content-margin-top: 0.83rem;
+  --project-h4-margin-top: 2rem;
+  --project-h4-margin-bottom: 0.83rem;
+  --project-h4-content-margin-top: 0.83rem;
 }
 
-.post-detail-page {
+.project-detail-page {
   min-height: 100vh;
   padding-top: 160px;
   padding-bottom: 4rem;
   background: #fafdff;
 }
 
-.post-detail-container {
+.project-detail-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
   width: 100%;
 }
 
-.post-header-card {
+.project-header-card {
   background: white;
   border-radius: 20px;
   padding: 2.5rem 2rem;
@@ -39,7 +39,7 @@
   box-sizing: border-box;
 }
 
-.post-detail-title {
+.project-detail-title {
   font-size: 2rem;
   font-weight: 800;
   background: linear-gradient(90deg, #76cfc5 0%, #ffb400 100%);
@@ -55,14 +55,14 @@
   display: block;
 }
 
-.post-detail-tags {
+.project-detail-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   margin: 1.2rem 0;
 }
 
-.post-detail-tag {
+.project-detail-tag {
   padding: 0.4rem 1rem;
   font-size: 0.9rem;
   font-weight: 500;
@@ -72,7 +72,7 @@
   color: #76cfc5;
 }
 
-.post-detail-meta {
+.project-detail-meta {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -81,7 +81,7 @@
   flex-wrap: wrap;
 }
 
-.post-detail-avatar {
+.project-detail-avatar {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -92,7 +92,7 @@
   margin: 0;
 }
 
-.post-back-button {
+.project-back-button {
   color: #d48a88;
   text-decoration: none;
   font-weight: 600;
@@ -103,11 +103,11 @@
   gap: 0.5rem;
 }
 
-.post-back-button:hover {
+.project-back-button:hover {
   color: #ec6664;
 }
 
-.post-detail-meta-info {
+.project-detail-meta-info {
   display: flex;
   align-items: center;
   gap: 1.2rem;
@@ -115,22 +115,22 @@
   margin-left: auto;
 }
 
-.post-detail-author {
+.project-detail-author {
   font-size: 1rem;
   font-weight: 600;
   color: #333;
   line-height: 1.2;
 }
 
-.post-detail-date,
-.post-detail-read-time {
+.project-detail-date,
+.project-detail-read-time {
   font-size: 0.9rem;
   color: #666;
   line-height: 1.2;
 }
 
-/* Post content container */
-.post-detail-page .post-content {
+/* Project content container */
+.project-detail-page .project-content {
   background: white;
   border-radius: 20px;
   padding: 2.5rem 2rem;
@@ -141,16 +141,16 @@
   text-align: left !important;
 }
 
-/* Override global styles for post-content - ensure left alignment and proper spacing */
-.post-detail-page .post-content :global(p) {
+/* Override global styles for project-content - ensure left alignment and proper spacing */
+.project-detail-page .project-content :global(p) {
   max-width: none !important;
   text-align: left !important;
   margin-top: 0 !important;
   margin-bottom: 2rem !important;
 }
 
-.post-detail-page .post-content :global(h2),
-.post-detail-page .post-content h2 {
+.project-detail-page .project-content :global(h2),
+.project-detail-page .project-content h2 {
   font-size: 1.75rem !important;
   font-weight: 700 !important;
   margin-top: 3rem !important;
@@ -163,19 +163,19 @@
   display: block !important;
 }
 
-.post-detail-page .post-content :global(h2:first-child) {
+.project-detail-page .project-content :global(h2:first-child) {
   margin-top: 0 !important;
 }
 
 /* Ensure proper spacing after h2 - add significant margin-top */
-.post-detail-page .post-content :global(h2) + :global(p),
-.post-detail-page .post-content :global(h2) + :global(ul),
-.post-detail-page .post-content :global(h2) + :global(ol) {
+.project-detail-page .project-content :global(h2) + :global(p),
+.project-detail-page .project-content :global(h2) + :global(ul),
+.project-detail-page .project-content :global(h2) + :global(ol) {
   margin-top: 3.5rem !important;
 }
 
-.post-detail-page .post-content :global(h3),
-.post-detail-page .post-content h3 {
+.project-detail-page .project-content :global(h3),
+.project-detail-page .project-content h3 {
   font-size: 1.5rem !important;
   font-weight: 700 !important;
   margin-top: 2.5rem !important;
@@ -188,14 +188,14 @@
   display: block !important;
 }
 
-.post-detail-page .post-content :global(h3) + :global(p),
-.post-detail-page .post-content :global(h3) + :global(ul),
-.post-detail-page .post-content :global(h3) + :global(ol) {
+.project-detail-page .project-content :global(h3) + :global(p),
+.project-detail-page .project-content :global(h3) + :global(ul),
+.project-detail-page .project-content :global(h3) + :global(ol) {
   margin-top: 3rem !important;
 }
 
-.post-detail-page .post-content :global(h4),
-.post-detail-page .post-content h4 {
+.project-detail-page .project-content :global(h4),
+.project-detail-page .project-content h4 {
   font-size: 1.25rem !important;
   font-weight: 600 !important;
   margin-top: 2rem !important;
@@ -208,64 +208,64 @@
   display: block !important;
 }
 
-.post-detail-page .post-content :global(h4) + :global(p),
-.post-detail-page .post-content :global(h4) + :global(ul),
-.post-detail-page .post-content :global(h4) + :global(ol),
-.post-detail-page .post-content :global(h4) + :global(pre) {
+.project-detail-page .project-content :global(h4) + :global(p),
+.project-detail-page .project-content :global(h4) + :global(ul),
+.project-detail-page .project-content :global(h4) + :global(ol),
+.project-detail-page .project-content :global(h4) + :global(pre) {
   margin-top: 2.5rem !important;
 }
 
-.post-detail-page .post-content :global(ul),
-.post-detail-page .post-content :global(ol) {
+.project-detail-page .project-content :global(ul),
+.project-detail-page .project-content :global(ol) {
   margin-top: var(--space-4, 24px) !important;
   text-align: left !important;
 }
 
-.post-detail-page .post-content :global(ul:first-child),
-.post-detail-page .post-content :global(ol:first-child) {
+.project-detail-page .project-content :global(ul:first-child),
+.project-detail-page .project-content :global(ol:first-child) {
   margin-top: 0 !important;
 }
 
-.post-detail-page .post-content :global(li) {
+.project-detail-page .project-content :global(li) {
   margin-bottom: calc(var(--space-4, 24px) / 2) !important;
   text-align: left !important;
 }
 
-.post-detail-page .post-content :global(li) :global(strong) {
+.project-detail-page .project-content :global(li) :global(strong) {
   font-weight: 700;
   color: #333;
 }
 
-.post-detail-page .post-content :global(li) :global(p) {
+.project-detail-page .project-content :global(li) :global(p) {
   margin-bottom: 12px !important;
 }
 
-.post-detail-page .post-content :global(li) :global(ul),
-.post-detail-page .post-content :global(li) :global(ol) {
+.project-detail-page .project-content :global(li) :global(ul),
+.project-detail-page .project-content :global(li) :global(ol) {
   margin-bottom: 12px !important;
   margin-left: 24px !important;
   margin-top: 12px !important;
 }
 
-.post-detail-page .post-content :global(li) :global(:last-child) {
+.project-detail-page .project-content :global(li) :global(:last-child) {
   margin-bottom: 0 !important;
 }
 
-.post-detail-page .post-content :global(li:last-child) {
+.project-detail-page .project-content :global(li:last-child) {
   margin-bottom: 0 !important;
 }
 
-.post-detail-page .post-content :global(strong),
-.post-detail-page .post-content :global(b),
-.post-detail-page .post-content :global(dt),
-.post-detail-page .post-content :global(th) {
+.project-detail-page .project-content :global(strong),
+.project-detail-page .project-content :global(b),
+.project-detail-page .project-content :global(dt),
+.project-detail-page .project-content :global(th) {
   font-weight: 700;
 }
 
-.post-detail-page .post-content :global(code),
-.post-detail-page .post-content :global(kbd),
-.post-detail-page .post-content :global(samp),
-.post-detail-page .post-content :global(tt) {
+.project-detail-page .project-content :global(code),
+.project-detail-page .project-content :global(kbd),
+.project-detail-page .project-content :global(samp),
+.project-detail-page .project-content :global(tt) {
   background-color: #fff4db;
   border-radius: 4px;
   color: #8a6534;
@@ -275,19 +275,19 @@
   word-break: normal;
 }
 
-.post-detail-page .post-content :global(code:after),
-.post-detail-page .post-content :global(code:before),
-.post-detail-page .post-content :global(tt:after),
-.post-detail-page .post-content :global(tt:before) {
+.project-detail-page .project-content :global(code:after),
+.project-detail-page .project-content :global(code:before),
+.project-detail-page .project-content :global(tt:after),
+.project-detail-page .project-content :global(tt:before) {
   content: "\00a0";
   letter-spacing: -0.2em;
 }
 
 /* Override Astro code highlighting styles */
-.post-detail-page .post-content :global(pre),
-.post-detail-page .post-content :global(pre.astro-code),
-.post-detail-page .post-content :global(pre[class*="astro-code"]),
-.post-detail-page .post-content :global(pre[style*="background-color"]) {
+.project-detail-page .project-content :global(pre),
+.project-detail-page .project-content :global(pre.astro-code),
+.project-detail-page .project-content :global(pre[class*="astro-code"]),
+.project-detail-page .project-content :global(pre[style*="background-color"]) {
   background: #f5f5f5 !important;
   border-radius: 8px !important;
   font-size: 0.875rem !important;
@@ -298,35 +298,35 @@
   word-wrap: normal !important;
 }
 
-.post-detail-page .post-content :global(pre) :global(code),
-.post-detail-page .post-content :global(pre.astro-code) :global(code),
-.post-detail-page .post-content :global(pre[class*="astro-code"]) :global(code),
-.post-detail-page .post-content :global(pre[style*="background-color"]) :global(code) {
+.project-detail-page .project-content :global(pre) :global(code),
+.project-detail-page .project-content :global(pre.astro-code) :global(code),
+.project-detail-page .project-content :global(pre[class*="astro-code"]) :global(code),
+.project-detail-page .project-content :global(pre[style*="background-color"]) :global(code) {
   background: transparent !important;
   color: #333 !important;
   padding: 0 !important;
   font-size: inherit !important;
 }
 
-.post-detail-page .post-content :global(pre) :global(code) :global(span),
-.post-detail-page .post-content :global(pre.astro-code) :global(code) :global(span),
-.post-detail-page .post-content :global(pre[class*="astro-code"]) :global(code) :global(span) {
+.project-detail-page .project-content :global(pre) :global(code) :global(span),
+.project-detail-page .project-content :global(pre.astro-code) :global(code) :global(span),
+.project-detail-page .project-content :global(pre[class*="astro-code"]) :global(code) :global(span) {
   color: #333 !important;
 }
 
-.post-detail-page .post-content :global(pre) :global(code) :global(span[style]),
-.post-detail-page .post-content :global(pre.astro-code) :global(code) :global(span[style]) {
+.project-detail-page .project-content :global(pre) :global(code) :global(span[style]),
+.project-detail-page .project-content :global(pre.astro-code) :global(code) :global(span[style]) {
   color: #333 !important;
 }
 
-.post-detail-page .post-content :global(pre) :global(code:after),
-.post-detail-page .post-content :global(pre) :global(code:before),
-.post-detail-page .post-content :global(pre) :global(tt:after),
-.post-detail-page .post-content :global(pre) :global(tt:before) {
+.project-detail-page .project-content :global(pre) :global(code:after),
+.project-detail-page .project-content :global(pre) :global(code:before),
+.project-detail-page .project-content :global(pre) :global(tt:after),
+.project-detail-page .project-content :global(pre) :global(tt:before) {
   content: none;
 }
 
-.post-detail-page .post-content :global(blockquote) {
+.project-detail-page .project-content :global(blockquote) {
   border-left: 4px solid #76cfc5;
   padding-left: 1rem;
   margin: 24px 0 !important;
@@ -335,11 +335,11 @@
   text-align: left !important;
 }
 
-.post-detail-page .post-content :global(blockquote) :global(:last-child) {
+.project-detail-page .project-content :global(blockquote) :global(:last-child) {
   margin-bottom: 0;
 }
 
-.post-detail-page .post-content :global(hr) {
+.project-detail-page .project-content :global(hr) {
   background: rgba(0, 0, 0, 0.2);
   border: none;
   box-sizing: content-box;
@@ -349,7 +349,7 @@
   padding: 0;
 }
 
-.post-detail-page .post-content :global(img) {
+.project-detail-page .project-content :global(img) {
   border-style: none;
   max-width: 100%;
   height: auto;
@@ -357,7 +357,7 @@
   margin: 1.5rem 0;
 }
 
-.post-detail-page .post-content :global(a) {
+.project-detail-page .project-content :global(a) {
   background-color: transparent;
   color: #7026b9;
   font-weight: 500;
@@ -367,27 +367,27 @@
   text-underline-offset: 2px;
 }
 
-.post-detail-page .post-content :global(a:active),
-.post-detail-page .post-content :global(a:hover) {
+.project-detail-page .project-content :global(a:active),
+.project-detail-page .project-content :global(a:hover) {
   outline-width: 0;
   text-decoration: none;
 }
 
 /* Code Example Block */
-.post-detail-page .post-content :global(.code-example) {
+.project-detail-page .project-content :global(.code-example) {
   background: rgba(0, 0, 0, 0.04);
   border-radius: 8px;
   padding: 1.5rem;
   margin: 1.5rem 0;
 }
 
-.post-detail-page .post-content :global(.code-example) :global(h4) {
+.project-detail-page .project-content :global(.code-example) :global(h4) {
   margin-top: 0;
   margin-bottom: 1rem;
   font-size: 1.1rem;
 }
 
-.post-detail-page .post-content :global(.highlight) {
+.project-detail-page .project-content :global(.highlight) {
   background: rgba(118, 207, 197, 0.1);
   border-left: 4px solid #76cfc5;
   padding: 1rem 1.5rem;
@@ -395,35 +395,35 @@
   border-radius: 4px;
 }
 
-.post-detail-page .post-content :global(.highlight) :global(p) {
+.project-detail-page .project-content :global(.highlight) :global(p) {
   margin-bottom: 0;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .post-detail-page {
+  .project-detail-page {
     padding-top: 140px;
     padding-bottom: 2rem;
   }
 
-  .post-detail-container {
+  .project-detail-container {
     padding: 0 1rem;
   }
 
-  .post-header-card,
-  .post-detail-page .post-content {
+  .project-header-card,
+  .project-detail-page .project-content {
     padding: 2rem 1.5rem;
   }
 
-  .post-detail-title {
+  .project-detail-title {
     font-size: 1.75rem;
   }
 
-  .post-detail-page .post-content :global(h2) {
+  .project-detail-page .project-content :global(h2) {
     font-size: 1.5rem;
   }
 
-  .post-detail-page .post-content :global(h3) {
+  .project-detail-page .project-content :global(h3) {
     font-size: 1.25rem;
   }
 }

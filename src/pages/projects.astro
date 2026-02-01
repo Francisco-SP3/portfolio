@@ -1,15 +1,15 @@
 ---
 import { getCollection, type CollectionEntry } from "astro:content";
 import "../styles/home.css";
-import "../styles/posts.css";
+import "../styles/projects.css";
 import "../styles/page-transitions.css";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 import { siteConfig } from "../config/site";
-import { postImages, defaultPostImage } from "../config/posts-images";
+import { projectImages, defaultProjectImage } from "../config/projects-images";
 
-// Get all posts from content collection
-const allPosts = (await getCollection("posts")) as CollectionEntry<"posts">[];
+// Get all projects from content collection
+const allProjects = (await getCollection("projects")) as CollectionEntry<"projects">[];
 
 // Convert date format from "6/27/2025" to "June 27, 2025"
 function formatDate(dateString: string): string {
@@ -54,40 +54,39 @@ function extractExcerptFromMarkdown(
   return text;
 }
 
-// Transform content collection posts to match the expected format
-const posts = await Promise.all(
-  allPosts.map(async (post: any) => {
-    // Get slug from post - try multiple fallbacks
-    // In Astro, post.slug should be available, but if not, extract from id
-    let slug = post.slug;
-    if (!slug && post.id) {
-      // Extract slug from id (e.g., "posts/my-post.md" -> "my-post")
-      slug = post.id.split("/").pop()?.replace(/\.md$/, "") || "";
+// Transform content collection projects to match the expected format
+const projects = await Promise.all(
+  allProjects.map(async (project: any) => {
+    // Get slug from project - try multiple fallbacks
+    // In Astro, project.slug should be available, but if not, extract from id
+    let slug = project.slug;
+    if (!slug && project.id) {
+      // Extract slug from id (e.g., "projects/my-project.md" -> "my-project")
+      slug = project.id.split("/").pop()?.replace(/\.md$/, "") || "";
     }
     if (!slug) {
-      console.warn("Post missing slug:", post);
+      console.warn("Project missing slug:", project);
     }
 
     // Try to get excerpt from frontmatter first
-    let excerpt = post.data.excerpt;
+    let excerpt = project.data.excerpt;
 
     // If no excerpt in frontmatter, generate a default excerpt from title
     if (!excerpt) {
-      // In Astro 6.0, post.body is no longer available
+      // In Astro 6.0, project.body is no longer available
       // Use a default excerpt based on title or provide a generic message
-      excerpt = `Read more about ${post.data.title}...`;
+      excerpt = `Read more about ${project.data.title}...`;
     }
 
     // Get image from frontmatter, fallback to mapping, then default
-    const image = post.data.image || postImages[slug] || defaultPostImage;
+    const image = project.data.image || projectImages[slug] || defaultProjectImage;
 
     return {
       id: slug,
-      date: formatDate(post.data.date),
-      title: post.data.title,
-      tags: post.data.tags || [],
+      date: formatDate(project.data.date),
+      title: project.data.title,
+      tags: project.data.tags || [],
       excerpt: excerpt,
-      readTime: post.data.readTime || "5 min read",
       slug: slug,
       image: image,
     };
@@ -95,25 +94,25 @@ const posts = await Promise.all(
 );
 
 // Sort by date (newest first)
-posts.sort((a, b) => {
+projects.sort((a, b) => {
   return new Date(b.date).getTime() - new Date(a.date).getTime();
 });
 
-// Group posts by date
-const groupedPosts = posts.reduce(
-  (acc, post) => {
-    if (!acc[post.date]) {
-      acc[post.date] = [];
+// Group projects by date
+const groupedProjects = projects.reduce(
+  (acc, project) => {
+    if (!acc[project.date]) {
+      acc[project.date] = [];
     }
-    acc[post.date].push(post);
+    acc[project.date].push(project);
     return acc;
   },
-  {} as Record<string, typeof posts>
+  {} as Record<string, typeof projects>
 );
 
-// Extract all unique tags from posts
+// Extract all unique tags from projects
 const allTags = Array.from(
-  new Set(posts.flatMap((post) => post.tags.map((tag: string) => tag)))
+  new Set(projects.flatMap((project) => project.tags.map((tag: string) => tag)))
 ).sort();
 ---
 
@@ -123,7 +122,7 @@ const allTags = Array.from(
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
-    <title>Blog Posts - Astro Blog</title>
+    <title>Blog Projects - Astro Blog</title>
     <script>
       // Disable browser scroll restoration and ensure page starts at top
       if ("scrollRestoration" in history) {
@@ -136,18 +135,18 @@ const allTags = Array.from(
   <body>
     <Navigation />
 
-    <main class="posts-page">
-      <div class="posts-container page-content">
-        <div class="posts-header posts-header-animate">
-          <h1 class="posts-title">{siteConfig.posts.title}</h1>
-          <p class="posts-subtitle">{siteConfig.posts.subtitle}</p>
+    <main class="projects-page">
+      <div class="projects-container page-content">
+        <div class="projects-header projects-header-animate">
+          <h1 class="projects-title">{siteConfig.projects.title}</h1>
+          <p class="projects-subtitle">{siteConfig.projects.subtitle}</p>
         </div>
 
-        <div class="search-filter-section posts-content-animate">
+        <div class="search-filter-section projects-content-animate">
           <div class="search-box">
             <input
               type="text"
-              placeholder={siteConfig.posts.searchPlaceholder}
+              placeholder={siteConfig.projects.searchPlaceholder}
               class="search-input"
               id="search-input"
             />
@@ -175,7 +174,7 @@ const allTags = Array.from(
           </div>
         </div>
 
-        <div class="tags-filter posts-content-animate">
+        <div class="tags-filter projects-content-animate">
           <span class="tags-label">Filter by tags:</span>
           <div class="tags-list">
             {
@@ -191,60 +190,59 @@ const allTags = Array.from(
           </div>
         </div>
 
-        <div class="posts-list posts-content-animate">
+        <div class="projects-list projects-content-animate">
           {
-            Object.entries(groupedPosts).map(([date, datePosts]) => (
+            Object.entries(groupedProjects).map(([date, dateProjects]) => (
               <div class="date-group" data-date={date}>
                 <h2 class="date-header">{date}</h2>
                 <div class="date-card">
-                  {datePosts.map((post) => (
-                    <article class="post-item" data-post-id={post.slug}>
-                      <div class="post-summary">
+                  {dateProjects.map((project) => (
+                    <article class="project-item" data-project-id={project.slug}>
+                      <div class="project-summary">
                         <div class="title-icon-left" />
-                        <h3 class="post-title">
+                        <h3 class="project-title">
                           <a
-                            href={`/posts/${post.slug}`}
-                            class="post-title-link"
+                            href={`/projects/${project.slug}`}
+                            class="project-title-link"
                           >
-                            {post.title}
+                            {project.title}
                           </a>
                           <div class="title-icon-right" />
                         </h3>
-                        {post.tags.length > 0 && (
-                          <div class="post-tags">
-                            {post.tags.map((tag: string) => (
-                              <span class="post-tag">{tag}</span>
+                        {project.tags.length > 0 && (
+                          <div class="project-tags">
+                            {project.tags.map((tag: string) => (
+                              <span class="project-tag">{tag}</span>
                             ))}
                           </div>
                         )}
                         <button
-                          class="post-toggle"
-                          aria-label="Toggle post details"
+                          class="project-toggle"
+                          aria-label="Toggle project details"
                         >
-                          <span class="post-arrow">↓</span>
+                          <span class="project-arrow">↓</span>
                         </button>
                       </div>
-                      <div class="post-details">
-                        <div class="post-content-wrapper">
-                          <div class="post-excerpt-wrapper">
-                            <p class="post-excerpt">{post.excerpt}</p>
-                            <div class="post-footer">
+                      <div class="project-details">
+                        <div class="project-content-wrapper">
+                          <div class="project-excerpt-wrapper">
+                            <p class="project-excerpt">{project.excerpt}</p>
+                            <div class="project-footer">
                               <a
-                                href={`/posts/${post.slug}`}
-                                class="post-read-more"
+                                href={`/projects/${project.slug}`}
+                                class="project-read-more"
                               >
                                 Read more →
                               </a>
-                              <span class="post-read-time">
-                                ⏱️ {post.readTime}
+                              <span class="project-read-time">
                               </span>
                             </div>
                           </div>
-                          <div class="post-image-container">
+                          <div class="project-image-container">
                             <img
-                              src={post.image}
-                              alt={post.title}
-                              class="post-image"
+                              src={project.image}
+                              alt={project.title}
+                              class="project-image"
                             />
                           </div>
                         </div>
@@ -289,7 +287,7 @@ const allTags = Array.from(
     }
 
     // Trigger header animation
-    const header = document.querySelector(".posts-header-animate");
+    const header = document.querySelector(".projects-header-animate");
     if (header) {
       requestAnimationFrame(() => {
         header.classList.add("visible");
@@ -297,7 +295,7 @@ const allTags = Array.from(
     }
 
     // Trigger content animations
-    const contentElements = document.querySelectorAll(".posts-content-animate");
+    const contentElements = document.querySelectorAll(".projects-content-animate");
     contentElements.forEach((element) => {
       requestAnimationFrame(() => {
         element.classList.add("visible");
@@ -306,18 +304,18 @@ const allTags = Array.from(
   });
 
   // Expand/collapse behavior
-  const postToggles = document.querySelectorAll(".post-toggle");
-  const postSummaries = document.querySelectorAll(".post-summary");
+  const projectToggles = document.querySelectorAll(".project-toggle");
+  const projectSummaries = document.querySelectorAll(".project-summary");
 
-  postToggles.forEach((toggle) => {
+  projectToggles.forEach((toggle) => {
     toggle.addEventListener("click", (e) => {
       e.stopPropagation();
-      const postItem = toggle.closest(".post-item");
-      if (postItem) {
-        postItem.classList.toggle("expanded");
-        const arrow = toggle.querySelector(".post-arrow");
+      const projectItem = toggle.closest(".project-item");
+      if (projectItem) {
+        projectItem.classList.toggle("expanded");
+        const arrow = toggle.querySelector(".project-arrow");
         if (arrow) {
-          arrow.textContent = postItem.classList.contains("expanded")
+          arrow.textContent = projectItem.classList.contains("expanded")
             ? "↑"
             : "↓";
         }
@@ -326,23 +324,23 @@ const allTags = Array.from(
   });
 
   // Click row to expand/collapse
-  postSummaries.forEach((summary) => {
+  projectSummaries.forEach((summary) => {
     summary.addEventListener("click", (e) => {
       // Ignore clicks on the title link
-      if ((e.target as HTMLElement).closest(".post-title-link")) {
+      if ((e.target as HTMLElement).closest(".project-title-link")) {
         return;
       }
       // Ignore clicks on the toggle button
-      if ((e.target as HTMLElement).closest(".post-toggle")) {
+      if ((e.target as HTMLElement).closest(".project-toggle")) {
         return;
       }
 
-      const postItem = summary.closest(".post-item");
-      if (postItem) {
-        postItem.classList.toggle("expanded");
-        const arrow = postItem.querySelector(".post-arrow");
+      const projectItem = summary.closest(".project-item");
+      if (projectItem) {
+        projectItem.classList.toggle("expanded");
+        const arrow = projectItem.querySelector(".project-arrow");
         if (arrow) {
-          arrow.textContent = postItem.classList.contains("expanded")
+          arrow.textContent = projectItem.classList.contains("expanded")
             ? "↑"
             : "↓";
         }
@@ -355,13 +353,13 @@ const allTags = Array.from(
   if (searchInput) {
     searchInput.addEventListener("input", (e) => {
       const searchTerm = (e.target as HTMLInputElement).value.toLowerCase();
-      const postItems = document.querySelectorAll(".post-item");
+      const projectItems = document.querySelectorAll(".project-item");
 
-      postItems.forEach((item) => {
+      projectItems.forEach((item) => {
         const title =
-          item.querySelector(".post-title a")?.textContent?.toLowerCase() || "";
+          item.querySelector(".project-title a")?.textContent?.toLowerCase() || "";
         const excerpt =
-          item.querySelector(".post-excerpt")?.textContent?.toLowerCase() || "";
+          item.querySelector(".project-excerpt")?.textContent?.toLowerCase() || "";
 
         if (title.includes(searchTerm) || excerpt.includes(searchTerm)) {
           (item as HTMLElement).style.display = "block";
@@ -374,7 +372,7 @@ const allTags = Array.from(
       const dateGroups = document.querySelectorAll(".date-group");
       dateGroups.forEach((dateGroup) => {
         const visibleItems = dateGroup.querySelectorAll(
-          '.post-item[style*="block"], .post-item:not([style*="none"])'
+          '.project-item[style*="block"], .project-item:not([style*="none"])'
         );
         (dateGroup as HTMLElement).style.display =
           visibleItems.length > 0 ? "block" : "none";
@@ -396,8 +394,8 @@ const allTags = Array.from(
     // If no active tags, show everything
     if (activeTags.length === 0) {
       dateGroups.forEach((dateGroup) => {
-        const postItems = dateGroup.querySelectorAll(".post-item");
-        postItems.forEach((item) => {
+        const projectItems = dateGroup.querySelectorAll(".project-item");
+        projectItems.forEach((item) => {
           (item as HTMLElement).style.display = "block";
         });
         (dateGroup as HTMLElement).style.display = "block";
@@ -405,31 +403,31 @@ const allTags = Array.from(
       return;
     }
 
-    // Filter posts: show those matching any active tag
+    // Filter projects: show those matching any active tag
     dateGroups.forEach((dateGroup) => {
-      const postItems = dateGroup.querySelectorAll(".post-item");
-      let hasVisiblePosts = false;
+      const projectItems = dateGroup.querySelectorAll(".project-item");
+      let hasVisibleProjects = false;
 
-      postItems.forEach((item) => {
-        const postTags = Array.from(item.querySelectorAll(".post-tag")).map(
+      projectItems.forEach((item) => {
+        const projectTags = Array.from(item.querySelectorAll(".project-tag")).map(
           (tag) => tag.textContent?.toLowerCase().replace(/\s+/g, "-") || ""
         );
 
-        // Check if post has any active tag
+        // Check if project has any active tag
         const hasMatchingTag = activeTags.some((activeTag) =>
-          postTags.includes(activeTag)
+          projectTags.includes(activeTag)
         );
 
         if (hasMatchingTag) {
           (item as HTMLElement).style.display = "block";
-          hasVisiblePosts = true;
+          hasVisibleProjects = true;
         } else {
           (item as HTMLElement).style.display = "none";
         }
       });
 
-      // Hide date group when no visible posts
-      (dateGroup as HTMLElement).style.display = hasVisiblePosts
+      // Hide date group when no visible projects
+      (dateGroup as HTMLElement).style.display = hasVisibleProjects
         ? "block"
         : "none";
     });

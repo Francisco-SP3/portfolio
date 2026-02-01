@@ -15,6 +15,8 @@ As we approach 2025, businesses face unprecedented challenges and opportunities 
 
 The business environment in 2025 is characterized by several key trends:
 
+
+
 * Accelerated digital transformation across all industries
 * Increased focus on sustainability and ESG (Environmental, Social, Governance) factors
 * Evolving customer expectations and preferences
