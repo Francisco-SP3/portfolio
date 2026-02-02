@@ -4,7 +4,7 @@ date: "6/27/2025"
 author: "Someone"
 tags: ["Business"]
 readTime: "5 min read" 
-image: "/images/projects/call-3613071_640.png"
+image: "/portfolio/images/projects/call-3613071_640.png"
 excerpt: "A comprehensive market analysis template providing a structured approach to conducting thorough industry research and competitive analysis. This framework helps organizations make informed strategic decisions by covering all essential aspects of market research."
 ---
 

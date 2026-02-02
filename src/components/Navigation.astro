@@ -6,30 +6,30 @@ const currentPath = Astro.url.pathname;
 ---
 
 <nav>
-  <a href="/" class="site-name">{siteConfig.name}</a>
+  <a href="/portfolio" class="site-name">{siteConfig.name}</a>
   <ul class="nav-menu">
     <li>
-      <a href="/" class={`menu-link ${currentPath === "/" ? "active" : ""}`}
+      <a href="/portfolio" class={`menu-link ${currentPath === "/" ? "active" : ""}`}
         >{siteConfig.navigation.home}</a
       >
     </li>
     <li>
       <a
-        href="/projects"
+        href="/portfolio/projects"
         class={`menu-link ${currentPath.startsWith("/projects") ? "active" : ""}`}
         >{siteConfig.navigation.projects}</a
       >
     </li>
     <li>
       <a
-        href="/contact"
+        href="/portfolio/contact"
         class={`menu-link ${currentPath.startsWith("/contact") ? "active" : ""}`}
         >{siteConfig.navigation.contact}</a
       >
     </li>
     <li>
       <a
-        href="/comments"
+        href="/portfolio/comments"
         class={`menu-link ${currentPath.startsWith("/comments") ? "active" : ""}`}
         >{siteConfig.navigation.comments}</a
       >

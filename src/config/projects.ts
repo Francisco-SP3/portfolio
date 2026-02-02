@@ -1,16 +1,16 @@
 // Projects configuration
 export const projectsConfig = {
   images: [
-    "/svg/project1.svg",
-    "/svg/project2.svg",
-    "/svg/project3.svg",
-    "/svg/project4.svg",
-    "/svg/project5.svg",
-    "/svg/project6.svg",
-    "/svg/project7.svg",
-    "/svg/project8.svg",
-    "/svg/project9.svg",
-    "/svg/project10.svg",
+    "/portfolio/svg/project1.svg",
+    "/portfolio/svg/project2.svg",
+    "/portfolio/svg/project3.svg",
+    "/portfolio/svg/project4.svg",
+    "/portfolio/svg/project5.svg",
+    "/portfolio/svg/project6.svg",
+    "/portfolio/svg/project7.svg",
+    "/portfolio/svg/project8.svg",
+    "/portfolio/svg/project9.svg",
+    "/portfolio/svg/project10.svg",
   ],
   projects: [
     {

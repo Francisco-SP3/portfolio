@@ -119,7 +119,7 @@ const allTags = Array.from(
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/portfolio/svg+xml" href="/portfolio/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
     <title>Blog Projects - Astro Blog</title>
@@ -202,7 +202,7 @@ const allTags = Array.from(
                         <div class="title-icon-left" />
                         <h3 class="project-title">
                           <a
-                            href={`/projects/${project.slug}`}
+                            href={`/portfolio/projects/${project.slug}`}
                             class="project-title-link"
                           >
                             {project.title}
@@ -229,7 +229,7 @@ const allTags = Array.from(
                             <p class="project-excerpt">{project.excerpt}</p>
                             <div class="project-footer">
                               <a
-                                href={`/projects/${project.slug}`}
+                                href={`/portfolio/projects/${project.slug}`}
                                 class="project-read-more"
                               >
                                 Read more →

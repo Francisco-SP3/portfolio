@@ -4,7 +4,7 @@ date: "6/27/2025"
 author: "Someone"
 tags: ["Business", "Performance"]
 readTime: "6 min read"
-image: "/images/projects/headphones-1899759_640.png"
+image: "/portfolio/images/projects/headphones-1899759_640.png"
 excerpt: "A comprehensive guide to web performance optimization in 2025, covering the latest techniques and best practices. Learn how to achieve exceptional performance through Core Web Vitals optimization, modern loading strategies, and advanced caching techniques."
 ---
 

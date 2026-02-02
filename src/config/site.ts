@@ -17,14 +17,14 @@ export const siteConfig = {
     prefix: "Hello there! I'm",
     name: "Francisco Salas Porras",
     intro: "A passionate robotics engineer!",
-    avatar: "/image/fsp_photo.jpeg",
+    avatar: "/portfolio/image/fsp_photo.jpeg",
     buttons: {
       viewProjects: "View Projects",
       contactMe: "Contact Me",
     },
     socialLinks: [
-      { name: "LinkedIn", icon: "/svg/linkedin_dark.svg", url: "https://www.linkedin.com/company/astrodotbuild" },
-      { name: "GitHub", icon: "/svg/github_dark.svg", url: "https://github.com/tomcomtang/astro-cartoon-portfolio" },
+      { name: "LinkedIn", icon: "/portfolio/svg/linkedin_dark.svg", url: "https://www.linkedin.com/company/astrodotbuild" },
+      { name: "GitHub", icon: "/portfolio/svg/github_dark.svg", url: "https://github.com/tomcomtang/astro-cartoon-portfolio" },
     ],
   },
   
@@ -57,10 +57,10 @@ export const siteConfig = {
     followMe: {
       title: "Follow Me",
       links: [
-        { name: "Twitter", icon: "/svg/twitter.svg", url: "https://x.com/astrodotbuild" },
-        { name: "LinkedIn", icon: "/svg/linkedin.svg", url: "https://www.linkedin.com/company/astrodotbuild" },
-        { name: "Facebook", icon: "/svg/facebook.svg", url: "https://www.facebook.com/astrodotbuild" },
-        { name: "GitHub", icon: "/svg/github.svg", url: "https://github.com/tomcomtang/astro-cartoon-portfolio" },
+        { name: "Twitter", icon: "/portfolio/svg/twitter.svg", url: "https://x.com/astrodotbuild" },
+        { name: "LinkedIn", icon: "/portfolio/svg/linkedin.svg", url: "https://www.linkedin.com/company/astrodotbuild" },
+        { name: "Facebook", icon: "/portfolio/svg/facebook.svg", url: "https://www.facebook.com/astrodotbuild" },
+        { name: "GitHub", icon: "/portfolio/svg/github.svg", url: "https://github.com/tomcomtang/astro-cartoon-portfolio" },
       ],
     },
     footerText: [
