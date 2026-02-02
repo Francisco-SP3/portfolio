@@ -30,8 +30,9 @@ body {
 .contact-title {
   font-size: 2.5rem;
   font-weight: 800;
+  margin-top: 30px;
   margin-bottom: 1rem;
-  background: linear-gradient(90deg, #76cfc5 0%, #ffb400 100%);
+  background: linear-gradient(90deg, #3756bd 0%, #120983 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

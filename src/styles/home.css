@@ -289,7 +289,7 @@ nav {
 .hero-normal-text {
   font-size: 1.25rem;
   margin: 0;
-  color: #179b8e;
+  color: #677777;
   font-weight: 600;
   letter-spacing: 0.01em;
 }
@@ -299,7 +299,7 @@ nav {
   font-weight: 800;
   margin: 0;
   line-height: 1.1;
-  background: linear-gradient(90deg, #76cfc5 0%, #ffb400 100%);
+  background: linear-gradient(90deg, #78ccc4 0%, #12b4a4 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -311,7 +311,7 @@ nav {
 .hero-intro-text {
   font-size: 1.18rem;
   margin: 0;
-  color: #444;
+  color: #677777;
   line-height: 1.8;
   font-weight: 400;
 }
