@@ -14,9 +14,9 @@ export const siteConfig = {
   
   // Hero Section
   hero: {
-    prefix: "Hello there! I'm",
+    prefix: "Hello there! My name is",
     name: "Francisco Salas Porras",
-    intro: "A passionate robotics engineer!",
+    intro: "And I'm a passionate robotics engineer!",
     avatar: "/portfolio/image/fsp_photo.jpeg",
     buttons: {
       viewProjects: "View Projects",
@@ -31,7 +31,7 @@ export const siteConfig = {
   // About Section
   about: {
     title: "About Me",
-    text: "I'm originally from Monterrey, Mexico. I've dedicated myself working on and .",
+    text: "I'm originally from Monterrey, Mexico. I've spent years developing expertise in robotics and automation technologies.",
   },
   
   // Contact Page
