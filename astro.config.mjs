@@ -6,7 +6,6 @@ import react from '@astrojs/react';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://Francisco-SP3.github.io',
-  base: '/portfolio',
   output: 'static',
   integrations: [react()]
 });
