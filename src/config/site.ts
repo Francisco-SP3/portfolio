@@ -23,8 +23,8 @@ export const siteConfig = {
       contactMe: "Contact Me",
     },
     socialLinks: [
-      { name: "LinkedIn", icon: "/portfolio/svg/linkedin_dark.svg", url: "https://www.linkedin.com/company/astrodotbuild" },
-      { name: "GitHub", icon: "/portfolio/svg/github_dark.svg", url: "https://github.com/tomcomtang/astro-cartoon-portfolio" },
+      { name: "LinkedIn", icon: "/portfolio/svg/linkedin_light.svg", url: "https://www.linkedin.com/company/astrodotbuild" },
+      { name: "GitHub", icon: "/portfolio/svg/github_light.svg", url: "https://github.com/tomcomtang/astro-cartoon-portfolio" },
     ],
   },
   

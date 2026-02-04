@@ -176,7 +176,7 @@ nav {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(250, 253, 255, 0.95);
+  background: rgba(53, 53, 53, 0.95);
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
   border-bottom: 1px solid rgba(118, 207, 197, 0.1);
@@ -186,7 +186,7 @@ nav {
   font-weight: 700;
   font-size: 1.5rem;
   letter-spacing: 0.05em;
-  color: #ec6664;
+  color: #7b83cf;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -197,7 +197,7 @@ nav {
 }
 
 .site-name:hover {
-  color: #ffb400;
+  color: #a8aff0;
   transform: scale(1.08);
 }
 
@@ -220,7 +220,7 @@ nav {
 
 .menu-link {
   font-weight: 700;
-  color: #d48a88;
+  color: #7b83cf;
   text-decoration: none;
   font-size: 1.1rem;
   transition:
@@ -233,17 +233,17 @@ nav {
 }
 
 .menu-link:hover {
-  color: #ec6664;
+  color: #a8aff0;
   transform: scale(1.08);
 }
 
 .menu-link.active {
-  color: #ec6664;
+  color: #a8aff0;
 }
 
 /* Hero Section */
 .hero-section {
-  background: #fafdff;
+  background: #222222;
   min-height: 100vh;
   width: 100%;
   display: flex;
@@ -329,8 +329,8 @@ nav {
   font-weight: 700;
   border-radius: 2rem;
   border: 2px solid #b0c4cc;
-  background: linear-gradient(90deg, #ffe9b2 0%, #76cfc5 100%);
-  color: #fff;
+  background: linear-gradient(90deg, #eaf6fa 0%, #c7e6f5 100%);
+  color: #179b8e;
   cursor: pointer;
   transition:
     background 0.3s,
@@ -342,7 +342,7 @@ nav {
 }
 
 .hero-btn:hover {
-  background: linear-gradient(90deg, #76cfc5 0%, #ffe9b2 100%);
+  background: linear-gradient(90deg, #c7e6f5 0%, #eaf6fa 100%);
   transform: scale(1.06);
   box-shadow: 0 4px 16px rgba(94, 194, 182, 0.18);
 }
@@ -390,7 +390,7 @@ nav {
 .hero-avatar:hover {
   transform: scale(1.06);
   box-shadow: 0 8px 32px rgba(118, 207, 197, 0.18);
-  border-color: #ec6664;
+  border-color: #a8aff0;
 }
 
 .social-list {
@@ -434,9 +434,10 @@ nav {
 .about-section {
   background: linear-gradient(
     135deg,
-    #6dd5c7 0%,
-    #5bc0ae 50%,
-    #4db09e 100%
+    #125f56 0%,
+    #177066 30%,
+    #177066 70%,
+    #125f56 100%
   );
   width: 100vw;
   min-width: 100vw;
@@ -503,9 +504,10 @@ nav {
 .projects-section {
   background: linear-gradient(
     135deg,
-    #f0a868 0%,
-    #ecb993 50%,
-    #e8a87c 100%
+    #285477 0%,
+    #376891 30%,
+    #376891 70%,
+    #285477 100%
   );
   width: 100vw;
   min-width: 100vw;
@@ -521,7 +523,6 @@ nav {
   max-width: 1600px;
   margin: 0 auto;
   color: #fff;
-  text-align: center;
   padding: 0 2rem;
 }
 
@@ -714,9 +715,7 @@ nav {
   width: 100%;
   max-width: 400px;
   height: 250px;
-  border-radius: 12px;
   object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .project-title {
@@ -781,7 +780,13 @@ nav {
 
 /* Proficiency Section */
 .proficiency-section {
-  background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+  background: linear-gradient(
+    135deg,
+    #43395e 0%,
+    #564b74 30%,
+    #564b74 70%,
+    #43395e 100%
+  );
   width: 100vw;
   min-width: 100vw;
   position: relative;
@@ -798,7 +803,6 @@ nav {
 }
 
 .proficiency-content {
-  max-width: 1200px;
   margin: 0 auto;
   color: #333;
   text-align: center;
@@ -819,10 +823,9 @@ nav {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem 12rem;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem 6rem;
   width: 100%;
-  max-width: 1600px;
 }
 
 .skill-card {
@@ -907,11 +910,11 @@ nav {
 }
 
 .skill-color-3 {
-  color: #ec6664;
+  color: #eb4947;
 }
 
 .skill-color-4 {
-  color: #ec6664;
+  color: #eb4947;
 }
 
 .skill-color-5 {
@@ -925,7 +928,7 @@ nav {
 /* Footer */
 footer {
   height: 60px;
-  background: #fff;
+  background: rgba(53, 53, 53, 0.95);
   width: 100vw;
   display: flex;
   align-items: center;
@@ -961,11 +964,11 @@ footer {
   align-items: center;
   height: 100%;
   gap: 0.5rem;
-  color: #000;
+  color: #dadada;
 }
 
 .footer-link {
-  color: #000;
+  color: #dadada;
   text-decoration: none;
   margin: 0 0.5em;
 }
@@ -975,7 +978,7 @@ footer {
 }
 
 .footer-github {
-  color: #000;
+  color: #dadada;
   text-decoration: none;
   padding-bottom: 1px;
   transition: all 0.3s ease;
