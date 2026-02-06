@@ -95,33 +95,32 @@ if (
     <main class="project-detail-page">
       <div class="project-detail-container page-content">
         <div class="project-header-card project-header-animate">
-          <h1 class="project-detail-title">{project.data.title}</h1>
-          {
-            project.data.tags && project.data.tags.length > 0 && (
-              <div class="project-detail-tags">
-                {project.data.tags.map((tag: string) => (
-                  <span class="project-detail-tag">{tag}</span>
-                ))}
-              </div>
-            )
-          }
-          <div class="project-detail-meta">
-            <a href="/portfolio/projects" class="project-back-button"> ← Back to projects </a>
-            <div class="project-detail-meta-info">
-              <span class="project-detail-date">{project.data.date}</span>
+          <div class="project-header-main">
+            <div class="max-width: 100px">
+              <h1 class="project-detail-title">{project.data.title}</h1>
+              {
+                project.data.tags && project.data.tags.length > 0 && (
+                  <div class="project-detail-tags">
+                    {project.data.tags.map((tag: string) => (
+                      <span class="project-detail-tag">{tag}</span>
+                    ))}
+                  </div>
+                )
+              }
             </div>
+            <img
+              src={project.data.image}
+              class="project-image"
+            />
+          </div>
+          <div class="project-detail-meta">
+            <span class="project-detail-date">{project.data.date}</span>
+            <a href="/portfolio/projects" class="project-back-button"> ← Back to projects </a>
           </div>
         </div>
 
-        <div class="project-content project-content-animate">
-          {
-            typeof Content === "function" ? (
-              <Content />
-            ) : (
-              <div set:html={Content} />
-            )
-          }
-        </div>
+        <div class="project-content project-content-animate" set:html={Content} />
+        
       </div>
     </main>
 

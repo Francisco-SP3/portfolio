@@ -220,7 +220,7 @@ const allTags = Array.from(
                           class="project-toggle"
                           aria-label="Toggle project details"
                         >
-                          <span class="project-arrow">↓</span>
+                          <div class="project-arrow" />
                         </button>
                       </div>
                       <div class="project-details">
@@ -241,7 +241,7 @@ const allTags = Array.from(
                           <div class="project-image-container">
                             <img
                               src={project.image}
-                              alt={project.title}
+                              alt="Image not found"
                               class="project-image"
                             />
                           </div>
@@ -313,12 +313,6 @@ const allTags = Array.from(
       const projectItem = toggle.closest(".project-item");
       if (projectItem) {
         projectItem.classList.toggle("expanded");
-        const arrow = toggle.querySelector(".project-arrow");
-        if (arrow) {
-          arrow.textContent = projectItem.classList.contains("expanded")
-            ? "↑"
-            : "↓";
-        }
       }
     });
   });
@@ -338,12 +332,6 @@ const allTags = Array.from(
       const projectItem = summary.closest(".project-item");
       if (projectItem) {
         projectItem.classList.toggle("expanded");
-        const arrow = projectItem.querySelector(".project-arrow");
-        if (arrow) {
-          arrow.textContent = projectItem.classList.contains("expanded")
-            ? "↑"
-            : "↓";
-        }
       }
     });
   });

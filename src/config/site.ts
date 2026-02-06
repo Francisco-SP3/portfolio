@@ -23,8 +23,10 @@ export const siteConfig = {
       contactMe: "Contact Me",
     },
     socialLinks: [
-      { name: "LinkedIn", icon: "/portfolio/svg/linkedin_light.svg", url: "https://www.linkedin.com/company/astrodotbuild" },
-      { name: "GitHub", icon: "/portfolio/svg/github_light.svg", url: "https://github.com/tomcomtang/astro-cartoon-portfolio" },
+      { name: "Instagram", icon: "/portfolio/svg/instagram_light.svg", url: "https://www.instagram.com/fsp03" },
+      { name: "Twitter", icon: "/portfolio/svg/twitter_light.svg", url: "https://x.com/astrodotbuild" },
+      { name: "LinkedIn", icon: "/portfolio/svg/linkedin_light.svg", url: "https://www.linkedin.com/in/fsp03" },
+      { name: "GitHub", icon: "/portfolio/svg/github_light.svg", url: "https://github.com/Francisco-SP3" },
     ],
   },
   
@@ -41,26 +43,26 @@ export const siteConfig = {
     info: {
       email: {
         label: "Email",
-        value: "tom@example.com",
-        link: "mailto:tom@example.com",
+        value: "paco.salas.porras@gmail.com",
+        link: "mailto:paco.salas.porras@gmail.com",
       },
       phone: {
         label: "Phone",
-        value: "+1 (234) 567-890",
-        link: "tel:+1 (234) 567-890",
+        value: "+52 (800) 555-0133 ",
+        link: "tel:+52 (800) 555-0133",
       },
       location: {
         label: "Location",
-        value: "San Francisco, CA",
+        value: "Monterrey, Mexico",
       },
     },
     followMe: {
       title: "Follow Me",
       links: [
-        { name: "Twitter", icon: "/portfolio/svg/twitter.svg", url: "https://x.com/astrodotbuild" },
-        { name: "LinkedIn", icon: "/portfolio/svg/linkedin.svg", url: "https://www.linkedin.com/company/astrodotbuild" },
-        { name: "Facebook", icon: "/portfolio/svg/facebook.svg", url: "https://www.facebook.com/astrodotbuild" },
-        { name: "GitHub", icon: "/portfolio/svg/github.svg", url: "https://github.com/tomcomtang/astro-cartoon-portfolio" },
+        { name: "Instagram", icon: "/portfolio/svg/instagram_dark.svg", url: "https://www.instagram.com/fsp03" },
+        { name: "Twitter", icon: "/portfolio/svg/twitter_dark.svg", url: "https://x.com/astrodotbuild" },
+        { name: "LinkedIn", icon: "/portfolio/svg/linkedin_dark.svg", url: "https://www.linkedin.com/in/fsp03" },
+        { name: "GitHub", icon: "/portfolio/svg/github_dark.svg", url: "https://github.com/Francisco-SP3" },
       ],
     },
     footerText: [
@@ -73,11 +75,6 @@ export const siteConfig = {
   // Footer
   footer: {
     copyright: "© 2026 Francisco-SP3. All rights reserved.",
-    links: [
-      { text: "Privacy Policy", url: "#" },
-      { text: "Terms of Service", url: "#" },
-      { text: "Sitemap", url: "#" },
-    ],
     github: {
       text: "Star this project on Github",
       url: "https://github.com/tomcomtang/astro-cartoon-portfolio",

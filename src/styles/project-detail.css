@@ -18,7 +18,7 @@
   min-height: 100vh;
   padding-top: 160px;
   padding-bottom: 4rem;
-  background: #fafdff;
+  background: #222222;
 }
 
 .project-detail-container {
@@ -29,27 +29,45 @@
 }
 
 .project-header-card {
-  background: white;
+  background: #aaa;
   border-radius: 20px;
   padding: 2.5rem 2rem;
   margin-bottom: 2.5rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  border: 1px solid #e9ecef;
+  border: 1px solid #424242;
   width: 100%;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.project-header-main{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.prohect-header-division {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .project-detail-title {
   font-size: 2rem;
   font-weight: 800;
-  background: linear-gradient(90deg, #5674d8 0%, #483ece 100%);
+  background: #292929;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
   line-height: 1.2;
   margin: 0;
-  word-break: break-word;
+  text-wrap: balance;
   text-align: left;
   width: 100%;
   display: block;
@@ -66,19 +84,19 @@
   padding: 0.4rem 1rem;
   font-size: 0.9rem;
   font-weight: 500;
-  border: 2px solid #76cfc5;
+  border: 2px solid #292929;
   border-radius: 20px;
-  background-color: rgba(118, 207, 197, 0.1);
-  color: #76cfc5;
+  background-color: #29292913;
+  color: #292929;
 }
 
 .project-detail-meta {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   gap: 1.2rem;
-  margin-top: 0.5rem;
   flex-wrap: wrap;
+  margin-top: 10px;
 }
 
 .project-detail-avatar {
@@ -93,10 +111,10 @@
 }
 
 .project-back-button {
-  color: #d48a88;
+  color: #003530;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.1rem;
   transition: color 0.2s ease;
   display: inline-flex;
   align-items: center;
@@ -104,7 +122,7 @@
 }
 
 .project-back-button:hover {
-  color: #ec6664;
+  color: #0f887c;
 }
 
 .project-detail-meta-info {
@@ -122,39 +140,42 @@
   line-height: 1.2;
 }
 
-.project-detail-date,
-.project-detail-read-time {
-  font-size: 0.9rem;
-  color: #666;
+.project-detail-date{
+  font-size: 1.2rem;
+  color: #292929;
   line-height: 1.2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-left: 0.2rem;
 }
 
 /* Project content container */
-.project-detail-page .project-content {
-  background: white;
+.project-content {
+  background: #a7a7a7;
   border-radius: 20px;
   padding: 2.5rem 2rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  border: 1px solid #e9ecef;
+  border: 1px solid #424242;
   width: 100%;
   box-sizing: border-box;
   text-align: left !important;
 }
 
 /* Override global styles for project-content - ensure left alignment and proper spacing */
-.project-detail-page .project-content :global(p) {
+.project-content p {
+  font-size: 1.1rem;
   max-width: none !important;
   text-align: left !important;
   margin-top: 0 !important;
   margin-bottom: 2rem !important;
 }
 
-.project-detail-page .project-content :global(h2),
-.project-detail-page .project-content h2 {
+.project-content h2 {
   font-size: 1.75rem !important;
   font-weight: 700 !important;
-  margin-top: 3rem !important;
-  margin-bottom: 3.5rem !important;
+  margin-top: 2rem !important;
+  margin-bottom: 1.5rem !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
   color: #333 !important;
@@ -163,19 +184,20 @@
   display: block !important;
 }
 
-.project-detail-page .project-content :global(h2:first-child) {
+.project-content h2:first-child {
   margin-top: 0 !important;
+  margin-bottom: 1.5rem !important;
 }
 
 /* Ensure proper spacing after h2 - add significant margin-top */
-.project-detail-page .project-content :global(h2) + :global(p),
-.project-detail-page .project-content :global(h2) + :global(ul),
-.project-detail-page .project-content :global(h2) + :global(ol) {
-  margin-top: 3.5rem !important;
+.project-content h2 + p,
+.project-content h2 + ul,
+.project-content h2 + ol {
+  margin-top: 1.5rem !important;
 }
 
-.project-detail-page .project-content :global(h3),
-.project-detail-page .project-content h3 {
+.project-content h3 ,
+.project-content h3 {
   font-size: 1.5rem !important;
   font-weight: 700 !important;
   margin-top: 2.5rem !important;
@@ -188,14 +210,14 @@
   display: block !important;
 }
 
-.project-detail-page .project-content :global(h3) + :global(p),
-.project-detail-page .project-content :global(h3) + :global(ul),
-.project-detail-page .project-content :global(h3) + :global(ol) {
-  margin-top: 3rem !important;
+.project-content h3 + p ,
+.project-content h3 + ul ,
+.project-content h3 + ol {
+  margin-top: 7rem !important;
 }
 
-.project-detail-page .project-content :global(h4),
-.project-detail-page .project-content h4 {
+.project-content h4 ,
+.project-content h4 {
   font-size: 1.25rem !important;
   font-weight: 600 !important;
   margin-top: 2rem !important;
@@ -208,64 +230,64 @@
   display: block !important;
 }
 
-.project-detail-page .project-content :global(h4) + :global(p),
-.project-detail-page .project-content :global(h4) + :global(ul),
-.project-detail-page .project-content :global(h4) + :global(ol),
-.project-detail-page .project-content :global(h4) + :global(pre) {
+.project-content h4 + p ,
+.project-content h4 + ul ,
+.project-content h4 + ol ,
+.project-content h4 + pre {
   margin-top: 2.5rem !important;
 }
 
-.project-detail-page .project-content :global(ul),
-.project-detail-page .project-content :global(ol) {
-  margin-top: var(--space-4, 24px) !important;
+.project-content ul ,
+.project-content ol {
+  margin-top: 1 rem !important;
   text-align: left !important;
 }
 
-.project-detail-page .project-content :global(ul:first-child),
-.project-detail-page .project-content :global(ol:first-child) {
+.project-content ul:first-child ,
+.project-content ol:first-child {
   margin-top: 0 !important;
 }
 
-.project-detail-page .project-content :global(li) {
-  margin-bottom: calc(var(--space-4, 24px) / 2) !important;
+.project-content li {
+  margin-bottom: calc(var(--space-4)), 24px / 2 !important;
   text-align: left !important;
 }
 
-.project-detail-page .project-content :global(li) :global(strong) {
+.project-content li strong {
   font-weight: 700;
   color: #333;
 }
 
-.project-detail-page .project-content :global(li) :global(p) {
+.project-content li p {
   margin-bottom: 12px !important;
 }
 
-.project-detail-page .project-content :global(li) :global(ul),
-.project-detail-page .project-content :global(li) :global(ol) {
+.project-content li ul ,
+.project-content li ol {
   margin-bottom: 12px !important;
   margin-left: 24px !important;
   margin-top: 12px !important;
 }
 
-.project-detail-page .project-content :global(li) :global(:last-child) {
+.project-content li :last-child {
   margin-bottom: 0 !important;
 }
 
-.project-detail-page .project-content :global(li:last-child) {
+.project-content li:last-child {
   margin-bottom: 0 !important;
 }
 
-.project-detail-page .project-content :global(strong),
-.project-detail-page .project-content :global(b),
-.project-detail-page .project-content :global(dt),
-.project-detail-page .project-content :global(th) {
+.project-content strong ,
+.project-content b ,
+.project-content dt ,
+.project-content th {
   font-weight: 700;
 }
 
-.project-detail-page .project-content :global(code),
-.project-detail-page .project-content :global(kbd),
-.project-detail-page .project-content :global(samp),
-.project-detail-page .project-content :global(tt) {
+.project-content code ,
+.project-content kbd ,
+.project-content samp ,
+.project-content tt {
   background-color: #fff4db;
   border-radius: 4px;
   color: #8a6534;
@@ -275,19 +297,19 @@
   word-break: normal;
 }
 
-.project-detail-page .project-content :global(code:after),
-.project-detail-page .project-content :global(code:before),
-.project-detail-page .project-content :global(tt:after),
-.project-detail-page .project-content :global(tt:before) {
+.project-content code:after ,
+.project-content code:before ,
+.project-content tt:after ,
+.project-content tt:before {
   content: "\00a0";
   letter-spacing: -0.2em;
 }
 
 /* Override Astro code highlighting styles */
-.project-detail-page .project-content :global(pre),
-.project-detail-page .project-content :global(pre.astro-code),
-.project-detail-page .project-content :global(pre[class*="astro-code"]),
-.project-detail-page .project-content :global(pre[style*="background-color"]) {
+.project-content pre ,
+.project-content pre.astro-code ,
+.project-content pre[class*="astro-code"] ,
+.project-content pre[style*="background-color"] {
   background: #f5f5f5 !important;
   border-radius: 8px !important;
   font-size: 0.875rem !important;
@@ -298,35 +320,35 @@
   word-wrap: normal !important;
 }
 
-.project-detail-page .project-content :global(pre) :global(code),
-.project-detail-page .project-content :global(pre.astro-code) :global(code),
-.project-detail-page .project-content :global(pre[class*="astro-code"]) :global(code),
-.project-detail-page .project-content :global(pre[style*="background-color"]) :global(code) {
+.project-content pre code ,
+.project-content pre.astro-code code ,
+.project-content pre[class*="astro-code"] code ,
+.project-content pre[style*="background-color"] code {
   background: transparent !important;
   color: #333 !important;
   padding: 0 !important;
   font-size: inherit !important;
 }
 
-.project-detail-page .project-content :global(pre) :global(code) :global(span),
-.project-detail-page .project-content :global(pre.astro-code) :global(code) :global(span),
-.project-detail-page .project-content :global(pre[class*="astro-code"]) :global(code) :global(span) {
+.project-content pre code span ,
+.project-content pre.astro-code code span ,
+.project-content pre[class*="astro-code"] code span {
   color: #333 !important;
 }
 
-.project-detail-page .project-content :global(pre) :global(code) :global(span[style]),
-.project-detail-page .project-content :global(pre.astro-code) :global(code) :global(span[style]) {
+.project-content pre code span[style] ,
+.project-content pre.astro-code code span[style] {
   color: #333 !important;
 }
 
-.project-detail-page .project-content :global(pre) :global(code:after),
-.project-detail-page .project-content :global(pre) :global(code:before),
-.project-detail-page .project-content :global(pre) :global(tt:after),
-.project-detail-page .project-content :global(pre) :global(tt:before) {
+.project-content pre code:after ,
+.project-content pre code:before ,
+.project-content pre tt:after ,
+.project-content pre tt:before {
   content: none;
 }
 
-.project-detail-page .project-content :global(blockquote) {
+.project-content blockquote {
   border-left: 4px solid #76cfc5;
   padding-left: 1rem;
   margin: 24px 0 !important;
@@ -335,11 +357,11 @@
   text-align: left !important;
 }
 
-.project-detail-page .project-content :global(blockquote) :global(:last-child) {
+.project-content blockquote :last-child {
   margin-bottom: 0;
 }
 
-.project-detail-page .project-content :global(hr) {
+.project-content hr {
   background: rgba(0, 0, 0, 0.2);
   border: none;
   box-sizing: content-box;
@@ -349,15 +371,17 @@
   padding: 0;
 }
 
-.project-detail-page .project-content :global(img) {
-  border-style: none;
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin: 1.5rem 0;
+.project-content img {
+  display: block !important;
+  max-width: 90% !important;
+  height: auto !important;
+  margin: 2.5rem auto !important;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border: 1px solid #424242;
 }
 
-.project-detail-page .project-content :global(a) {
+.project-content a {
   background-color: transparent;
   color: #7026b9;
   font-weight: 500;
@@ -367,27 +391,27 @@
   text-underline-offset: 2px;
 }
 
-.project-detail-page .project-content :global(a:active),
-.project-detail-page .project-content :global(a:hover) {
+.project-content a:active ,
+.project-content a:hover {
   outline-width: 0;
   text-decoration: none;
 }
 
 /* Code Example Block */
-.project-detail-page .project-content :global(.code-example) {
+.project-content .code-example {
   background: rgba(0, 0, 0, 0.04);
   border-radius: 8px;
   padding: 1.5rem;
   margin: 1.5rem 0;
 }
 
-.project-detail-page .project-content :global(.code-example) :global(h4) {
+.project-content .code-example h4 {
   margin-top: 0;
   margin-bottom: 1rem;
   font-size: 1.1rem;
 }
 
-.project-detail-page .project-content :global(.highlight) {
+.project-content .highlight {
   background: rgba(118, 207, 197, 0.1);
   border-left: 4px solid #76cfc5;
   padding: 1rem 1.5rem;
@@ -395,7 +419,7 @@
   border-radius: 4px;
 }
 
-.project-detail-page .project-content :global(.highlight) :global(p) {
+.project-content .highlight p {
   margin-bottom: 0;
 }
 
@@ -411,7 +435,7 @@
   }
 
   .project-header-card,
-  .project-detail-page .project-content {
+  .project-content {
     padding: 2rem 1.5rem;
   }
 
@@ -419,11 +443,11 @@
     font-size: 1.75rem;
   }
 
-  .project-detail-page .project-content :global(h2) {
+  .project-content h2 {
     font-size: 1.5rem;
   }
 
-  .project-detail-page .project-content :global(h3) {
+  .project-content h3 {
     font-size: 1.25rem;
   }
 }
