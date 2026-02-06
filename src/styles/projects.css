@@ -1,6 +1,6 @@
 /* Projects Page Styles */
 .projects-page {
-  background: #fafdff;
+  background: #222222;
   min-height: 100vh;
   padding-top: 80px;
   padding-bottom: 4rem;
@@ -24,8 +24,9 @@
   font-size: 2.5rem;
   font-weight: 800;
   margin: 0 auto 1rem;
+  margin-top: 30px;
   letter-spacing: 0.01em;
-  background: linear-gradient(90deg, #76cfc5 0%, #ffb400 100%);
+  background: linear-gradient(90deg, #78ccc4 0%, #12b4a4 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -35,7 +36,7 @@
 
 .projects-subtitle {
   font-size: 1.1rem;
-  color: #666;
+  color: #677777;
   margin: 0 auto;
   line-height: 1.6;
   text-align: center !important;
@@ -47,6 +48,7 @@
   margin-bottom: 2rem;
   display: flex;
   justify-content: center;
+  min-width: 600px;
 }
 
 .search-box {
@@ -58,7 +60,8 @@
 .search-input {
   width: 100%;
   padding: 0.75rem 2.5rem 0.75rem 1rem;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #575757;
+  background: #aaa;
   border-radius: 8px;
   font-size: 1rem;
   font-family: var(--font-sans);
@@ -76,7 +79,7 @@
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
-  color: #a0aec0;
+  color: #575757;
   pointer-events: none;
 }
 
@@ -92,7 +95,7 @@
 
 .tags-label {
   font-weight: 600;
-  color: #333;
+  color: #677777;
   font-size: 1rem;
 }
 
@@ -104,12 +107,12 @@
 
 .tag-button {
   padding: 0.5rem 1rem;
-  background: #fff;
-  border: 1px solid #e2e8f0;
+  background: #575757;
+  border: 1px solid #424242;
   border-radius: 20px;
   font-size: 0.9rem;
   font-weight: 500;
-  color: #4a5568;
+  color: #c0c0c0;
   cursor: pointer;
   transition: all 0.2s ease;
   font-family: var(--font-sans);
@@ -122,7 +125,7 @@
 }
 
 .tag-button.active {
-  background: #76cfc5;
+  background: #0f887c;
   border-color: #76cfc5;
   color: #fff;
 }
@@ -148,17 +151,17 @@
 }
 
 .date-card {
-  background: #fff;
+  background: #aaa;
   border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  border: 1px solid #e2e8f0;
+  border: 1px solid #424242;
 }
 
 /* Project Item */
 .project-item {
   margin-bottom: 1.5rem;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid #424242;
   padding-bottom: 1.5rem;
 }
 
@@ -181,11 +184,11 @@
 }
 
 .project-summary:hover {
-  background-color: #f7fafc;
+  background-color: #c0c0c0;
 }
 
-.project-summary:hover .project-title a {
-  color: #76cfc5;
+.project-summary:hover {
+  color: #424242;
 }
 
 .title-icon-left {
@@ -193,7 +196,7 @@
   width: 20px;
   height: 24px;
   opacity: 0.8;
-  background: linear-gradient(135deg, #76cfc5 0%, #ffb400 50%, #ec6664 100%);
+  background: linear-gradient(135deg, #818181 0%, #5e5e5e 50%, #2e2e2e 100%);
   -webkit-mask: url(/portfolio/svg/willow-decoration.svg) no-repeat center;
   -webkit-mask-size: contain;
   mask: url(/portfolio/svg/willow-decoration.svg) no-repeat center;
@@ -219,7 +222,7 @@
   width: 20px;
   height: 24px;
   opacity: 0.8;
-  background: linear-gradient(135deg, #76cfc5 0%, #ffb400 50%, #ec6664 100%);
+  background: linear-gradient(135deg, #818181 0%, #5e5e5e 50%, #2e2e2e 100%);
   -webkit-mask: url(/portfolio/svg/willow-decoration.svg) no-repeat center;
   -webkit-mask-size: contain;
   mask: url(/portfolio/svg/willow-decoration.svg) no-repeat center;
@@ -229,13 +232,15 @@
 }
 
 .project-title-link {
-  color: #2d3748;
+  color: #292929;
   text-decoration: none;
-  transition: color 0.2s ease;
+  text-align: center;
+  text-wrap: balance;
+  max-width: 60%;
 }
 
 .project-title-link:hover {
-  color: #76cfc5;
+  color: #0f887c;
 }
 
 .project-tags {
@@ -243,17 +248,17 @@
   flex-wrap: wrap;
   gap: 0.5rem;
   align-items: center;
+  max-width: 40%;
 }
 
 .project-tag {
   display: inline-block;
   padding: 0.2rem 0.6rem;
-  background: #f7fafc;
-  color: #4a5568;
+  background: #696969;
+  color: #c0c0c0;
   border-radius: 12px;
   font-size: 0.8rem;
   font-weight: 500;
-  border: 1px solid #e2e8f0;
 }
 
 .project-toggle {
@@ -274,14 +279,21 @@
 }
 
 .project-arrow {
-  font-size: 1.2rem;
-  color: #76cfc5;
-  line-height: 1;
-  transition: color 0.3s ease, transform 0.3s ease;
+  flex-shrink: 0;
+  width: 20px;
+  height: 24px;
+  opacity: 0.8;
+  background: #292929;
+  -webkit-mask: url(/portfolio/svg/triangle-down.svg) no-repeat center;
+  -webkit-mask-size: contain;
+  mask: url(/portfolio/svg/triangle-down.svg) no-repeat center;
+  mask-size: contain;
+  transform: scaleY(1);
+  margin-right: 0.5rem;
 }
 
 .project-item.expanded .project-arrow {
-  color: #ffb400;
+  transform: scaleY(-1);
 }
 
 .project-details {
@@ -293,7 +305,7 @@
 }
 
 .project-item.expanded .project-details {
-  max-height: 2000px;
+  max-height: 200px;
   margin-top: 1.5rem;
   opacity: 1;
 }
@@ -307,9 +319,8 @@
 }
 
 .project-excerpt-wrapper {
-  flex: 0 0 60%;
+  flex: 0 0 70%;
   min-width: 0;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding-left: 1rem;
@@ -317,13 +328,15 @@
 
 .project-excerpt {
   font-size: 1.15rem;
-  color: #4a5568;
+  color: #424242;
   line-height: 1.7;
   margin: 0;
+  max-width: 100%;
+  max-height: 125px;
+  overflow: hidden;
 }
 
 .project-image-container {
-  flex: 0 0 20%;
   min-width: 180px;
   max-width: 330px;
   border-radius: 8px;
@@ -338,7 +351,7 @@
 
 .project-image {
   width: auto;
-  height: 200px;
+  height: 150px;
   max-width: 100%;
   object-fit: contain;
   display: block;
@@ -349,14 +362,14 @@
   display: flex;
   align-items: center;
   gap: 1.1rem;
-  margin-top: 0;
+  margin-top: 30px;
   padding-top: 0;
   border-top: none;
   padding-left: 0;
 }
 
 .project-read-more {
-  color: #76cfc5;
+  color: #003530;
   text-decoration: none;
   font-weight: 600;
   font-size: 1.1rem;
@@ -364,7 +377,7 @@
 }
 
 .project-read-more:hover {
-  color: #5bc0ae;
+  color: #0f887c;
 }
 
 .project-read-time {

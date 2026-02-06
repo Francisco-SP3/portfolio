@@ -1,11 +1,11 @@
 /* Contact Page Styles */
 body {
-  background: linear-gradient(120deg, #fffaf5 0%, #fff5f0 50%, #fff0eb 100%) !important;
+  background: #222222 !important;
   min-height: 100vh;
 }
 
 .contact-page {
-  min-height: 100vh;
+  min-height: 94vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,8 +30,9 @@ body {
 .contact-title {
   font-size: 2.5rem;
   font-weight: 800;
+  margin-top: 30px;
   margin-bottom: 1rem;
-  background: linear-gradient(90deg, #76cfc5 0%, #ffb400 100%);
+  background: linear-gradient(90deg, #78ccc4 0%, #12b4a4 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -40,7 +41,7 @@ body {
 
 .contact-subtitle {
   font-size: 1.2rem;
-  color: #666;
+  color: #677777;
   margin: 0 auto;
   max-width: 600px;
   line-height: 1.6;
@@ -55,8 +56,7 @@ body {
 }
 
 .contact-card {
-  background: linear-gradient(#fff, #fff) padding-box,
-    linear-gradient(45deg, #f0f0f0, #f8f8f8, #f0f0f0) border-box;
+  background: #aaa padding-box;
   border-radius: 16px;
   padding: 2rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
@@ -68,7 +68,7 @@ body {
   font-size: 1.6rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  color: #666;
+  color: #383838;
   text-align: center;
 }
 
@@ -76,7 +76,7 @@ body {
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 1.2rem;
-  color: #666;
+  color: #383838;
   text-align: center;
 }
 
@@ -111,21 +111,9 @@ body {
   flex-shrink: 0;
 }
 
-.email-icon {
-  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
-}
-
-.phone-icon {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-.location-icon {
-  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-}
-
 .contact-icon {
-  width: 24px;
-  height: 24px;
+  width: 50px;
+  height: auto;
   display: block;
   margin: auto;
 }
@@ -137,13 +125,13 @@ body {
 
 .contact-info-label {
   font-size: 0.9rem;
-  color: #666;
+  color: #383838;
   margin-bottom: 0.3rem;
 }
 
 .contact-info-value {
   font-size: 1.1rem;
-  color: #666;
+  color: #383838;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s;
@@ -152,7 +140,7 @@ body {
 }
 
 .contact-info-value:hover {
-  color: #76cfc5;
+  color: #0f887c;
 }
 
 .contact-message-button-wrapper {

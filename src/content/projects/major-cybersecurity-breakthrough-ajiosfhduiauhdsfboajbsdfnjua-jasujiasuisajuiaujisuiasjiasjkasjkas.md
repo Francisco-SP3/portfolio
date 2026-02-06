@@ -1,8 +1,9 @@
 ---
-title: "Major Cybersecurity Breakthrough"
+title: "Major Cybersecurity Breakthrough ajiosf hduiauhdsf boajbsdf njua jasujia suisajuiau jisuiasji asjkasjkas"
 date: "6/27/2025"
 author: "Someone"
-tags: []
+tags: ["ROS2", "C++"]
+image: "/portfolio/images/projects/tree.jpg"
 readTime: "6 min read"
 excerpt: "Researchers have unveiled a revolutionary AI-powered threat detection system that can identify and neutralize cyber attacks with unprecedented accuracy. This breakthrough promises to reshape cybersecurity by reducing response times from hours to milliseconds."
 ---
@@ -20,6 +21,8 @@ The new AI-powered cybersecurity system leverages several advanced technologies:
 * Automated threat response and mitigation
 * Predictive threat intelligence
 * Zero-day attack detection capabilities
+
+![tree.jpg|100](/portfolio/images/projects/tree.jpg)
 
 ## Key Features and Capabilities
 

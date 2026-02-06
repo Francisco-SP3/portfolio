@@ -1,0 +1,12 @@
+:root {
+  --primary-color: #76cfc5;
+  --secondary-color: #ec6664;
+}
+```
+
+Then, we can update the `about.astro` file to use these colors.
+
+```tool
+TOOL_NAME: edit_existing_file
+BEGIN_ARG: filepath
+"src/pages/about.astro"
