@@ -1,5 +1,5 @@
 ---
-title: "Gigante de Acero: Biophilia & Sustainability" 
+title: "Iron Giant: Biophilia & Sustainability" 
 date: "11/26/2021" 
 tags: ["Biomimicry", "Sustainability"] 
 excerpt: "A study on the biophilic design and LEED certification of the BBVA Stadium, including proposals for ecological improvement."
