@@ -18,8 +18,8 @@ jobs:
       - name: Install, build, and upload with Astro
         uses: withastro/action@v3
         with: 
-          node-version: 20
-          package-manager: 'pnpm'
+          node-version: 24
+          package-manager: 'npm'
 
   deploy:
     needs: build
